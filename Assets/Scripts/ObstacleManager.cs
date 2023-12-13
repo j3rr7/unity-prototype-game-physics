@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -20,11 +18,11 @@ public class ObstacleManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            PlayerManager playerManager = collision.gameObject.GetComponent<PlayerManager>();
 
-            if (playerController != null)
+            if (playerManager != null)
             {
-                playerController.ApplyDamage(100f);
+                playerManager.ApplyDamage(100f);
             }
         }
     }

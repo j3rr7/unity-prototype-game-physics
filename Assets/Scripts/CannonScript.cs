@@ -14,6 +14,14 @@ public class CannonScript : MonoBehaviour
     [SerializeField]
     private float force = 1f;
 
+    [Space]
+
+    [SerializeField]
+    private float _minDelay = 1f;
+
+    [SerializeField]
+    private float _maxDelay = 5f;
+
     void Start()
     {
         StartCoroutine(ShootCannonball());
@@ -29,7 +37,7 @@ public class CannonScript : MonoBehaviour
             Vector3 direction = firePoint.transform.forward;
             rb.AddForce(direction.normalized * force, ForceMode.Impulse);
 
-            yield return new WaitForSeconds(Random.Range(1, 5));
+            yield return new WaitForSeconds(Random.Range(_minDelay, _maxDelay));
         }
     }
 }

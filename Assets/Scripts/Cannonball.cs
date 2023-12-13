@@ -21,10 +21,10 @@ public class Cannonball : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-            if (player != null)
+            PlayerManager playerManager = collision.gameObject.GetComponent<PlayerManager>();
+            if (playerManager != null)
             {
-                player.ApplyDamage(100f);
+                playerManager.ApplyDamage(100f);
             }
         }
     }
