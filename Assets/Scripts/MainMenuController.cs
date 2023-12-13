@@ -22,7 +22,7 @@ public class MainMenuController: MonoBehaviour
     // ======================================
     public void OnPlayGameButtonClicked()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadSceneAsync("GameScene");
     }
 
     public void OnExitButtonClicked()
