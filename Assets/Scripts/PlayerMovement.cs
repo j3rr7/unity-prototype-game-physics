@@ -38,13 +38,6 @@ public class PlayerMovement : MonoBehaviour
         jumpAction = FindAnyObjectByType<PlayerInput>().actions.FindAction("Jump");
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         // always move forward
